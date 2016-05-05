@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<BorderPane fx:controller="com.duncangb.life.LifeController" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <BorderPane>
+            <left>
+                <Button onKeyPressed="#handleNextGeneration" onMousePressed="#handleNextGeneration" text="Next Generation"/>
+            </left>
+
+            <right>
+                <Label fx:id="information"/>
+            </right>
+        </BorderPane>
+    </top>
+
+    <center>
+        <Canvas width="500" height="500" id="board" onMousePressed="#handleCanvasMousePress" fx:id="board"/>
+    </center>
+</BorderPane>
